@@ -16,7 +16,7 @@
         android:orderInCategory="200"
         android:title="@string/action_search"
         app:actionViewClass="android.widget.SearchView"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
     <item
         android:id="@+id/action_about"
         android:title="@string/action_about"

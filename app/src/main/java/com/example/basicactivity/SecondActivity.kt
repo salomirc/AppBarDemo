@@ -2,37 +2,28 @@ package com.example.basicactivity
 
 import android.app.SearchManager
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.content_main.*
+import androidx.core.view.MenuItemCompat
+import kotlinx.android.synthetic.main.activity_second.*
 
 
-class MainActivity : AppCompatActivity() {
+class SecondActivity : AppCompatActivity() {
 
     private var isFavSelected: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        toolbar.title = resources.getString(R.string.main_title)
+        setContentView(R.layout.activity_second)
+        toolbar.title = resources.getString(R.string.title_activity_second)
         setSupportActionBar(toolbar)
-
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
-
-        nextPageButton.setOnClickListener {
-            val intent = Intent(this, SecondActivity::class.java)
-            startActivity(intent)
-        }
+        // Get a support ActionBar corresponding to this toolbar and enable the Up button
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -57,7 +48,7 @@ class MainActivity : AppCompatActivity() {
             SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
                 //do the search here
-                Toast.makeText(this@MainActivity, "You are searching : $query", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@SecondActivity, "You are searching : $query", Toast.LENGTH_SHORT).show()
                 searchView.onActionViewCollapsed()
                 return false
             }
@@ -97,4 +88,5 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
 }

@@ -6,4 +6,7 @@
     <string name="action_search">Search</string>
     <string name="action_favorite">Favorite</string>
     <string name="main_title">Home</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="next">Next</string>
+    <string name="first_activity">First Activity</string>
 </resources>
