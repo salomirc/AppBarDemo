@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         nextPageButton.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
-            startActivity(intent)
+//            startActivity(intent)
         }
     }
 

@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="buttonStyle">@style/Widget.App.ButtonCustom</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -16,5 +17,18 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Widget.App.ButtonCustom" parent="Widget.AppCompat.Button.Colored" />
+
+    <style name="ThemeOverlay.App.ButtonCustom" parent="">
+        // the button Tint color
+        <item name="colorAccent">@android:color/holo_orange_dark</item>
+        // the disabled Tint color
+        <item name="colorButtonNormal">@color/colorGray</item>
+        // the disabled Alpha color (0f to 1f)
+        <item name="android:disabledAlpha">0.5</item>
+        // the ripple color
+        <item name="colorControlHighlight">@color/colorWhiteAlpha50</item>
+    </style>
 
 </resources>
